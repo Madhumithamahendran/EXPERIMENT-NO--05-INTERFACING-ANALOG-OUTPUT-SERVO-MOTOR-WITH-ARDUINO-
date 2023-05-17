@@ -48,6 +48,21 @@ An external controller (such as the Arduino) tells the servo where to go with a 
 
 
 CIRCUIT DIAGRAM
+
+
+![5 rob b](https://github.com/Madhumithamahendran/EXPERIMENT-NO--05-INTERFACING-ANALOG-OUTPUT-SERVO-MOTOR-WITH-ARDUINO-/assets/119394403/9d79e857-1a7a-4f3b-88cb-678e90a9370c)
+
+
+
+
+OUTPUT
+
+
+
+
+
+![rob 5 stim](https://github.com/Madhumithamahendran/EXPERIMENT-NO--05-INTERFACING-ANALOG-OUTPUT-SERVO-MOTOR-WITH-ARDUINO-/assets/119394403/0b81c1d6-6cca-45ec-826b-2994c91c3b75)
+
  
  
  ![image](https://user-images.githubusercontent.com/36288975/163544618-6eb8a7b5-7f1a-428a-8d9f-fd899b145efb.png)
@@ -67,7 +82,80 @@ CIRCUIT DIAGRAM
 
 
 ### PROGRAM :
- 
+#include<Servo.h>
+
+Servo myservo;
+
+
+
+int value;
+
+
+
+double angle;
+
+
+
+
+void setup()
+
+
+
+
+{
+
+
+
+
+  Serial.begin(9600);
+  
+  
+  
+  myservo.attach(9);
+  
+  
+  
+  
+}
+
+
+
+
+void loop()
+
+
+
+
+{
+
+
+
+
+  value = analogRead(A0);
+  
+  
+  
+  
+  angle = map(value, 0, 1023, 0, 180);
+  
+  
+  
+  
+  Serial.println(angle);
+  
+  
+  
+  
+  myservo.write(angle);
+  
+  
+  
+  
+  delay(15);
+  
+  
+  
+}
 
 
 
