@@ -8,7 +8,7 @@ COMPONENTS REQUIRED:
 3.	Arduino Uno 
 4.	USB Interfacing cable 
 5.	Connecting wires 
-6.	Servo rated power supply (dc source )
+6.	Servo rated power supply (dc source ) 
 
 
 ### THEORY
